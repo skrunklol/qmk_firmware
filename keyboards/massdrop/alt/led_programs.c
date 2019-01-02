@@ -26,6 +26,32 @@ led_setup_t leds_teal_salmon[] = {
     { .end = 1 },
 };
 
+//All Teal
+led_setup_t leds_teal[] = {
+    { .hs = 0,  .he = 100,  .rs = 24,  .re = 24,  .gs = 215, .ge = 215, .bs = 204, .be = 204, .ef = EF_NONE },
+    { .end = 1 },
+};
+
+//Classic all purple
+led_setup_t leds_purple[] = {
+    { .hs = 0,  .he = 100,  .rs = 139,  .re = 139,  .gs = 0, .ge = 0, .bs = 139, .be = 139, .ef = EF_NONE },
+    { .end = 1 },
+};
+
+//Classic all magenta
+led_setup_t leds_orchid[] = {
+    { .hs = 0,  .he = 100,  .rs = 255,  .re = 255,  .gs = 0, .ge = 0, .bs = 255, .be = 255, .ef = EF_NONE },
+    { .end = 1 },
+};
+
+//Classic pink shade wave
+led_setup_t leds_orchid_wave[] = {
+  { .hs = 66, .he = 100,  .rs = 102,  .re = 102, .gs = 0, .ge = 0, .bs = 102, .be = 102, .ef = EF_OVER | EF_SCR_R },
+  { .hs = 0,  .he = 33,  .rs = 255,  .re = 255,  .gs = 0, .ge = 0, .bs = 255, .be = 255, .ef = EF_OVER | EF_SCR_R },
+  { .hs = 33, .he = 66,  .rs = 139,  .re = 139, .gs = 0, .ge = 0, .bs = 139, .be = 139, .ef = EF_OVER | EF_SCR_R },
+  { .end = 1 },
+};
+
 //Yellow
 led_setup_t leds_yellow[] = {
     { .hs = 0, .he = 100, .rs = 255, .re = 255, .gs = 255, .ge = 255, .bs = 0, .be = 0, .ef = EF_NONE },
@@ -104,16 +130,20 @@ led_setup_t leds_rainbow_s[] = {
 //Add the new animation name to the list below following its format
 
 void *led_setups[] = {
+    //leds_teal_salmon,
+    //leds_teal,
     leds_rainbow_s,
     leds_rainbow_ns,
-    leds_teal_salmon,
     leds_yellow,
-    leds_red,
-    leds_green,
+    //leds_red,
+    //leds_green,
     leds_blue,
     leds_white,
-    leds_white_with_red_stripe,
-    leds_black_with_red_stripe,
+    leds_purple,
+    leds_orchid,
+    leds_orchid_wave,
+    //leds_white_with_red_stripe,
+    //leds_black_with_red_stripe,
     leds_off
 };
 
